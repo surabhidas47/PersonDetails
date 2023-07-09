@@ -14,23 +14,38 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
+       // String result = "";
         // create a `counter`
+        int count = 0;
+        StringBuilder join = new StringBuilder();
+
         // while `counter` is less than length of array
-            // begin loop
+        // begin loop
+        while(count<this.personArray.length){
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            join.append(this.personArray[count]);
+            count ++;
+            //join.append("\nMy first name is ").append(this.personArray[count].getFirstName());
+           // join.append("\nMy last name is ").append(this.personArray[count].getLastName());
 
-            // end loop
-        return result;
+
+        }
+
+        return join.toString();
     }
 
 
 
     public String forLoop() {
         String result = "";
+        int count = 0;
+        StringBuilder join = new StringBuilder();
+
+        for (int i=0;count<this.personArray.length;i++){
+            join.append(this.personArray[count]);
+            count ++;
+        }
+
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -42,23 +57,28 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return join.toString();
     }
 
 
 
     public String forEachLoop() {
         String result = "";
+        int count = 0;
+        StringBuilder join = new StringBuilder();
         // identify array's type
         // identify array's variable-name
-
+        for (Person person: this.personArray) {
+            join.append(this.personArray[count]);
+            count ++;
+        }
         // use the above discoveries to declare for-each-loop signature
             // begin loop
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return join.toString();
     }
 
 
